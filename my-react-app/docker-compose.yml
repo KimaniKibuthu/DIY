@@ -1,0 +1,10 @@
+services:
+  # Frontend React application
+  frontend:
+    build:
+      context: ./voice-causal-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_BASE_URL=http://108.129.110.27:8050
